@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head runat="server">
+    <meta charset=" utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>DAXDigitalPortalApp </title>
+	<script>
+	var x = 1;
+	</script>
+</head>
+<body>
+	<script>
+		document.write(x);
+		document.write("<hr />");
+		for(var i = 0; i < 5;i++){
+			document.write(i);
+			document.write("<br />");
+		}
+		document.write(i);
+		
+		document.write("<hr />");
+		function testlooping(){
+			document.write("<p>Show var j</p>");
+			for(var j = 0; j < 5;j++){
+				document.write(j);
+				document.write("<br />");
+			}
+		}
+		testlooping();
+		//document.write("j : " + j);
+		
+		document.write("<hr />");
+		function looping(){
+			document.write("<p>Show var k</p>");
+			for(var k = 0; k < 5;k++){
+				document.write(k);
+				document.write("<br />");
+			}
+			
+			function inlooping(){
+				document.write(k);
+			}
+			
+			document.write("<p>call inlooping</p>");
+			inlooping();
+		}
+		
+		looping();
+		
+		document.write("<hr />");
+		document.write("<p>Arrow Function <strong>const funct = function(a,b){return a* b;}</strong></p>");
+		const funct1 = function(a,b){
+			return a * b;
+		}
+		document.write(funct1(3,2));
+		
+		document.write("<hr />");
+		document.write("<p>Arrow Function <strong>const funct = (a,b) =>{return a* b;}</strong></p>");
+		const funct2 = (a,b) =>{
+			return a * b;
+		}
+		document.write(funct2(3,2));
+		
+		document.write("<hr />");
+		document.write("<p>Arrow Function <strong>const funct = (a,b) => a * b;</strong></p>");
+		const funct3 = (a,b) => a * b;
+		document.write(funct3(3,2));
+		
+		document.write("<hr />");
+		document.write("<p>Arrow Function <strong>const funct = (double) => double * double;</strong></p>");
+		const funct4 = (double) => double * double;
+		document.write(funct4(5));
+		
+		document.write("<hr />");
+		document.write("<p>Arrow Function <strong>const funct = double => double * double;</strong></p>");
+		const funct5 = double => double * double;
+		document.write(funct5(5));
+		
+		document.write("<hr />");
+		const numbers = [1,2,3,4,5];
+		const kalidua = numbers.map(function(number){
+			return 2 * number;
+		});
+		document.write(kalidua);
+		
+		document.write("<hr />");
+		const numbers2 = [1,2,3,4,5];
+		const kalidua2 = numbers.map(number => 2 * number);
+		document.write(kalidua2);
+	</script>
+</body>
+</html>
